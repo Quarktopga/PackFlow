@@ -4,8 +4,8 @@
 // (Project Settings > API). L'anon key est publique par design : c'est le
 // RLS côté base de données qui protège les données, jamais cette clé.
 // ============================================================================
-export const SUPABASE_URL = "https://YOUR-PROJECT.supabase.co";
-export const SUPABASE_ANON_KEY = "YOUR-ANON-PUBLIC-KEY";
+export const SUPABASE_URL = "https://lgwhenbandkpidtvoejb.supabase.co";
+export const SUPABASE_ANON_KEY = "sb_publishable_0kogZqBgz55npjmrLY7iDA_7z0m8xVF";
 
 // Dimensions standards proposées lors de la création d'un carton (cm)
 export const STANDARD_BOX_SIZES = [
@@ -52,7 +52,7 @@ export const TASK_CATEGORIES = {
 // Clé publique VAPID pour les notifications push (cf. README pour la générer,
 // ex. via `npx web-push generate-vapid-keys`). La clé privée correspondante
 // ne va JAMAIS ici — uniquement dans les secrets de l'Edge Function.
-export const VAPID_PUBLIC_KEY = "YOUR-VAPID-PUBLIC-KEY";
+export const VAPID_PUBLIC_KEY = "BEJS-fFqXHBMtN7t52PA35fhuU181pWvWzvBn9cBge8M0qfqFxK4-6EeHE_hpOkeYMc2wetBSl1dhA0-dtrGbu8";
 
 export const APP_NAME = "PackFlow";
 export const INVITE_PARAM = "invite";
