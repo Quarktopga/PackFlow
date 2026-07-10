@@ -1,0 +1,84 @@
+/* ==========================================================================
+   PackFlow — Design tokens
+   Concept: the shipping manifest / cargo tag. Amber cargo tag as the
+   signature accent, teal for "in transit / route" states, mono type for
+   tracking codes (box IDs) like a real waybill. Deux thèmes : clair et
+   sombre, pilotés par [data-theme] sur <html> (cf. js/theme.js).
+   ========================================================================== */
+
+:root {
+  /* Radii / spacing (partagés entre les deux thèmes) */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-tag: 16px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* Type */
+  --font-display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 140ms;
+  --dur-med: 260ms;
+
+  /* Safe areas (PWA / notch) */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  /* Accent (identique dans les deux thèmes — testé pour un bon contraste sur les deux) */
+  --amber: #e8a33d;
+  --amber-strong: #f0ae49;
+  --teal: #2a9d8f;
+  --teal-strong: #3ab6a6;
+  --signal: #e5484d;
+  --signal-strong: #d3383d;
+  --text-on-amber: #251705;
+}
+
+/* ---------------------------------------------------------------------------
+   Thème sombre (par défaut)
+   ------------------------------------------------------------------------- */
+:root,
+[data-theme="dark"] {
+  --ink: #10131c;
+  --ink-raised: #171b28;
+  --ink-card: #1e2333;
+  --ink-line: #2b3145;
+
+  --text-hi: #f4f2ec;
+  --text-mid: #c7cad6;
+  --text-low: #8a8fa3;
+
+  --shadow-card: 0 8px 24px -12px rgba(0, 0, 0, 0.5);
+  --shadow-pop: 0 16px 40px -12px rgba(0, 0, 0, 0.6);
+  --backdrop: rgba(6, 7, 11, 0.65);
+}
+
+/* ---------------------------------------------------------------------------
+   Thème clair
+   ------------------------------------------------------------------------- */
+[data-theme="light"] {
+  --ink: #f6f4ef;
+  --ink-raised: #ffffff;
+  --ink-card: #ffffff;
+  --ink-line: #e3ddd0;
+
+  --text-hi: #1b1d24;
+  --text-mid: #55596b;
+  --text-low: #83879a;
+
+  --shadow-card: 0 8px 20px -14px rgba(30, 26, 16, 0.22);
+  --shadow-pop: 0 20px 40px -16px rgba(30, 26, 16, 0.28);
+  --backdrop: rgba(40, 36, 28, 0.35);
+
+  --signal-strong: #c8323a;
+}

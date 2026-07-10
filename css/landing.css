@@ -1,0 +1,81 @@
+.landing {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: calc(var(--safe-top) + var(--space-6)) var(--space-5) calc(var(--space-6) + var(--safe-bottom));
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.brand-mark {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: var(--space-6);
+}
+.brand-mark img { width: 34px; height: 34px; border-radius: 9px; }
+.brand-mark span { font-family: var(--font-display); font-weight: 700; font-size: 20px; letter-spacing: 0.02em; }
+
+.hero-tag-art {
+  position: relative;
+  margin: var(--space-4) 0 var(--space-6);
+  height: 168px;
+  overflow: hidden;
+}
+.hero-tag-art .drift-tag {
+  position: absolute;
+  background: linear-gradient(135deg, var(--amber-strong), var(--amber));
+  border-radius: var(--r-tag);
+  box-shadow: var(--shadow-pop);
+}
+.hero-tag-art .t1 { width: 128px; height: 84px; top: 10px; left: 6%; transform: rotate(-8deg); }
+.hero-tag-art .t2 { width: 96px; height: 64px; top: 64px; left: 40%; transform: rotate(6deg); background: var(--ink-card); border: 1px solid var(--ink-line); box-shadow: none; }
+.hero-tag-art .t3 { width: 108px; height: 72px; top: 22px; right: 4%; transform: rotate(4deg); opacity: 0.9; }
+.hero-tag-art .hole { position: absolute; width: 12px; height: 12px; border-radius: 50%; background: var(--ink); top: 12px; left: 14px; }
+
+.hero-title { font-size: 40px; margin-bottom: var(--space-3); }
+.hero-title .accent { color: var(--amber-strong); }
+.hero-sub { font-size: 16px; color: var(--text-mid); margin-bottom: var(--space-6); max-width: 40ch; }
+
+.landing-actions { display: flex; flex-direction: column; gap: var(--space-3); margin-top: auto; }
+
+.invite-inline {
+  display: flex; gap: 8px;
+}
+.invite-inline input { flex: 1; }
+
+.landing-divider {
+  display: flex; align-items: center; gap: 12px;
+  color: var(--text-low); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em;
+  margin: var(--space-2) 0;
+}
+.landing-divider::before, .landing-divider::after { content: ""; flex: 1; height: 1px; background: var(--ink-line); }
+
+.feature-strip { display: flex; flex-direction: column; gap: var(--space-3); margin: var(--space-6) 0; }
+.feature-strip .row { align-items: flex-start; }
+.feature-strip .icon-badge {
+  width: 40px; height: 40px; border-radius: var(--r-sm);
+  background: var(--ink-card); border: 1px solid var(--ink-line);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.feature-strip .icon-badge svg { width: 20px; height: 20px; color: var(--amber-strong); }
+.feature-strip h4 { font-size: 14px; font-weight: 700; }
+.feature-strip p { font-size: 13px; color: var(--text-low); margin-top: 2px; }
+
+/* Auth steps -------------------------------------------------------------*/
+.step-dots { display: flex; gap: 6px; margin-bottom: var(--space-5); }
+.step-dot { height: 4px; flex: 1; border-radius: 999px; background: var(--ink-line); }
+.step-dot.active { background: var(--amber); }
+.step-dot.complete { background: var(--teal); }
+
+.pwa-install-card {
+  border: 1px dashed var(--ink-line);
+  border-radius: var(--r-lg);
+  padding: var(--space-4);
+  display: flex; align-items: center; gap: var(--space-3);
+  background: var(--ink-card);
+}
+.pwa-install-card .icon-badge {
+  width: 44px; height: 44px; border-radius: var(--r-sm);
+  background: var(--ink-raised); display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.pwa-install-card p { font-size: 13px; color: var(--text-low); }
